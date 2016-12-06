@@ -9,14 +9,16 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'jshint-loader'
+
       }
-    ],
+   ],
     loaders: [
       {
-        test: /\.es6$/,
+        test: [/\.js$/, /\.es6$/],
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
+          cacheDirectory: true,
           presets: ['react', 'es2015']
         }
       }
@@ -24,5 +26,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.es6']
-  },
+  }
 }
