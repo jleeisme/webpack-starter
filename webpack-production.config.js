@@ -4,9 +4,9 @@ var devConfig = require('./webpack.config.js'); //the original webpack.config fi
 var stripLoader = {
   test: [/\.js$/, /\.es6$/],
   exclude: /node_modules/,
-  loader: WebpackStripLoader.loader('console.log')//stripLoader removes console.log files
+  loader: WebpackStripLoader.loader('console.log') //stripLoader removes console.log files
 }
 
-devConfig.module.loaders.push(stripLoader);
+devConfig.module.loaders.push(stripLoader); //stripLoader object is pushed into the original config
 
-module.exports = devConfig;
+module.exports = devConfig; //export the new config object
