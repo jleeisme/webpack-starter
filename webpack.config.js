@@ -9,7 +9,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'jshint-loader'
-
       }
    ],
     loaders: [
@@ -25,6 +24,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.es6']
+    extensions: ['', '.js', '.es6']//empty string resolves 'require & import...from' without extensions
   }
 }
